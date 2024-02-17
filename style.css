@@ -1,0 +1,60 @@
+:root {
+    --title-color: #7391AD;
+    --background-color: #31C5D2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+nav {
+    background-color: var(--background-color);
+}
+
+button {
+    background-color: var(--background-color) !important;
+}
+
+#logo_accueil {
+    height: 30px;
+    width: auto;
+}
+
+#slide {
+  
+    position: fixed;
+    left: 30%;
+    right: 30%;
+    height: 55px;
+    top: -100px;
+    z-index: 10000000;
+    animation-name: slidein; 
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    
+    
+  }
+  
+  
+  
+  @keyframes slidein {
+    0% {
+      top: -100px;
+      
+    }
+    70% {
+        top: 0;
+        
+      }
+    100% {
+      top: 0;
+      
+    }
+  
+  }
+  
+  .border-special {
+    border: 2px solid var(--background-color) !important;
+  }
