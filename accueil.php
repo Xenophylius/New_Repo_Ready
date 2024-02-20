@@ -1,5 +1,7 @@
 <?php
 require_once 'config/autoload.php';
+require_once 'config/connexion.php';
+
 
     if (empty($_SESSION['user'])) {
         header('Location: index.php?error=Vous devez vous connecter.');
@@ -7,8 +9,13 @@ require_once 'config/autoload.php';
 
     include_once 'partials/header.php';
 
-    var_dump($_SESSION['user']->superGetter('center'));
     
+    
+    $usersManager = new Users($db);
+    echo '<pre>';
+    var_dump($usersManager->findAll());
+    echo '</pre>';
+
 ?>
 
 <h1>TITRE</h1>

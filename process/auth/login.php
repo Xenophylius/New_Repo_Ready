@@ -11,7 +11,7 @@ if (empty($_POST['lastname']) ||
     }
 
 $user = new Userlogin ($_POST);
-$userManager = new UserManager($db);
+$userManager = new Users($db);
 if (!$userManager->verifyLogin($user)) {
     header('Location: ../../index.php?error=Identifiant et/ou mot de passe incorrect.');
     die;

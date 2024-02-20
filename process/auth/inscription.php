@@ -13,7 +13,7 @@ if (empty($_POST['lastname']) ||
     }
 
 $user = new User ($_POST);
-$userManager = new UserManager($db);
+$userManager = new Users($db);
 
 $userManager->addUser($user);
 header('Location: ../../index.php?success=Vous êtes inscrit et connecté.');
